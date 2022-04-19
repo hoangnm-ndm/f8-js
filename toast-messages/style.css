@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 50px;
+  font-weight: 500;
+  line-height: 1.6;
+  cursor: pointer;
+  max-width: 300px;
+  min-width: 140px;
+  text-align: center;
+  transition: opacity 0.2s linear;
+}
+
+.btn + .btn {
+  margin-top: 22px;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn--disabled {
+  opacity: 0.5 !important;
+  cursor: default;
+}
+
+.btn--success {
+  background-color: #71be34;
+}
+
+.btn--warning {
+  background-color: #ffb702;
+}
+
+.btn--infor {
+  background-color: #3d74ff;
+}
+
+.btn--error {
+  background-color: #ff623d;
+}
+
+.btn--size-l {
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.btn--size-s {
+  font-size: 12px;
+  padding: 8px 22px;
+}
+
+
+/* toast */
+
+#toasts {
+
+}
+
+.toast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-left: 8px solid;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 8px rgba(0,0,0, 0.08);
+  color: #333;
+  max-width: 460px;
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  animation: slideInLeft ease 0.3s, fadeOut linear 1s 3s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(calc(100% + 32px));
+  } to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+
+.toast + .toast {
+  margin-top: 24px;
+}
+
+.toast__body {
+  flex-grow: 1;
+  margin: 0 24px;
+}
+
+.toast__body > h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.toast__body > p {
+  font-size: 14px;
+  color: #888;
+  margin-top: 8px;
+}
+
+.toast__icon {
+  font-size: 24px;
+  color: #3d74ff;
+}
+
+.toast__close {
+  padding: 8px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.toast__close:hover {
+  opacity: 0.8;
+}
+
+.toast--infor {
+  border-color: #3d74ff;
+}

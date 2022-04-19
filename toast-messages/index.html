@@ -5,8 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toast Messages</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
 </head/>
 <body>
+
+  <div id="btn">
+    <div onclick="showSuccess()" class="btn btn--success">Success</div>
+    <div onclick="showSuccess()" class="btn btn--warning">Warning</div>
+    <div onclick="showSuccess()" class="btn btn--error">Error</div>
+    <div onclick="showSuccess()" class="btn btn--infor">Infor</div>
+  </div>
+
+
+  <div id="toasts"></div>
+
+  <script src="./main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+
   
 </body>
 </html>
